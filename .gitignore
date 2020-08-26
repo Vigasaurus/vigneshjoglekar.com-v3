@@ -1,0 +1,12 @@
+# duh
+.env
+.vscode
+node_modules/
+.yarn/
+# Temporary Files
+tmp/
+temp/
+# Outdated Code
+old/
+# Built Code
+dist/

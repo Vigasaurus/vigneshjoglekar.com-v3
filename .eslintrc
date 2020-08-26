@@ -1,0 +1,73 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest/globals": true
+	},
+	"extends": ["google", "prettier", "plugin:react/recommended"],
+	"rules": {
+		"linebreak-style": "off",
+		"eol-last": "off",
+		"max-len": "off",
+		"one-var": "off",
+		"no-use-before-define": ["warn", { "functions": true, "classes": true }],
+		"no-warning-comments": "off",
+		"brace-style": "off",
+		"no-nested-ternary": "off",
+		"no-mixed-requires": "off",
+		"no-negated-condition": "off",
+		"no-tabs": "off",
+		"camelcase": "off",
+		"new-cap": "off",
+		"no-mixed-spaces-and-tabs": "off",
+		"quote-props": "off",
+		"space-before-function-paren": "off",
+		"guard-for-in": "off",
+		"max-nested-callbacks": "off",
+		"no-unmodified-loop-condition": "off",
+		"comma-dangle": "off",
+		"require-jsdoc": "off",
+		"arrow-parens": "off",
+		"prettier/prettier": "error",
+		"react/jsx-indent": "off",
+		"react/jsx-uses-vars": "error",
+		"react/jsx-uses-react": "error",
+		"react/jsx-indent-props": "off",
+		"react/no-unescaped-entities": "off",
+		"react/prop-types": "off",
+		"react/no-deprecated": "off",
+		"object-curly-spacing": "off",
+		"array-bracket-spacing": "off",
+		"no-invalid-this": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"jest/no-identical-title": "error",
+		"jest/valid-expect": "error",
+		"@typescript-eslint/no-explicit-any": "off"
+	},
+	"globals": {
+		"io": true,
+		"app": true,
+		"document": true,
+		"window": true,
+		"expect": true,
+		"describe": true,
+		"it": true
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2020,
+		"ecmaFeatures": {
+			"jsx": true,
+			"tsx": true
+		}
+	},
+	"plugins": ["react", "react-hooks", "prettier", "jest"],
+	"settings": {
+		"react": {
+			"createClass": "createReactClass",
+			"version": "detect"
+		}
+	}
+}
