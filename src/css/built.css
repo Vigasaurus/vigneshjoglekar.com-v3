@@ -1,3 +1,5 @@
+/* Tailwind Inclusion */
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -22240,6 +22242,8 @@ video {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
 }
+
+/* Personal Styles */
 
 @media (min-width: 640px) {
   .sm\:container {

@@ -26,5 +26,6 @@ module.exports = {
 		port: 4000,
 		disableHostCheck: true,
 		public: 'dev.vigneshjoglekar.com',
+		historyApiFallback: true,
 	},
 };

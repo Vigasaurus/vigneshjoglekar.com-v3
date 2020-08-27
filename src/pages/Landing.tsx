@@ -1,11 +1,12 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
 interface Props {}
 
 const Landing = (props: Props) => {
 	return (
 		<div className='text-center font-sans'>
-			<header className='bg-gray-200 m-6 p-6 rounded shadow-lg'>
+			<header className='bg-gray-200 m-6 p-6 rounded shadow-lg transition duration-150 ease-in-out'>
 				<h1 className='text-purple-600 font-hairline text-4xl'>
 					Vignesh Joglekar
 				</h1>

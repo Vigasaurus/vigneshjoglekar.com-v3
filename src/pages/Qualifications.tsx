@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {}
 
 const Qualifications = (props: Props) => {
-	return <React.Fragment />;
+	return <>Qualifications</>;
 };
 
 export default Qualifications;

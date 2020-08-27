@@ -13,15 +13,20 @@ import {
 interface Props {}
 
 const App = (props: Props) => {
+	console.log(window.location.pathname);
+	const prefix = window.location.href.includes('people.tamu.edu')
+		? '/~vjoglekar'
+		: '';
+
 	return (
 		<Router>
 			<Switch>
-				<Route exact path='/' component={Landing} />
-				<Route path='/about' component={About} />
-				<Route path='/projects' component={Projects} />
-				<Route path='/qualifications' component={Qualifications} />
-				<Route path='/service' component={Service} />
-				<Route path='/secret' component={Secret} secret />
+				<Route exact path={`${prefix}/`} component={Landing} />
+				<Route path={`${prefix}/about`} component={About} />
+				<Route path={`${prefix}/projects`} component={Projects} />
+				<Route path={`${prefix}/qualifications`} component={Qualifications} />
+				<Route path={`${prefix}/service`} component={Service} />
+				<Route path={`${prefix}/secret`} component={Secret} secret />
 				<Route component={NotFound} />
 			</Switch>
 		</Router>

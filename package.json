@@ -10,6 +10,7 @@
 		"build:styles": "npx tailwind build src/css/base.css -o src/css/built.css",
 		"start": "webpack-dev-server --config ./webpack.config.js --mode development",
 		"build": "webpack --config ./webpack.config.js --mode production",
+		"build:people": "yarn build && node scripts/prepareForPeople.js",
 		"lint": "eslint \"**/*.{js,ts,tsx,jsx}\"",
 		"prettier": "prettier \"**/*.{js,ts,css,tsx,json,jsx}\""
 	},
@@ -42,7 +43,9 @@
 		"postcss-preset-env": "^6.7.0",
 		"prettier": "^1.19.1",
 		"purgecss-webpack-plugin": "^1.6.0",
+		"react-router-dom": "^5.2.0",
 		"tailwindcss": "^1.1.2",
+		"tailwindcss-transitions": "^2.2.0",
 		"ts-loader": "^6.2.1",
 		"typescript": "^3.7.2",
 		"typings": "^2.1.1",

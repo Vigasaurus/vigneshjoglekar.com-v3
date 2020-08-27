@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {}
 
 const Projects = (props: Props) => {
-	return <React.Fragment />;
+	return <>Projects</>;
 };
 
 export default Projects;

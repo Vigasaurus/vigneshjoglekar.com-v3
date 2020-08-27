@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {}
 
 const Secret = (props: Props) => {
-	return <React.Fragment />;
+	return <>Secret</>;
 };
 
 export default Secret;
