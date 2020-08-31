@@ -10,3 +10,4 @@ temp/
 old/
 # Built Code
 dist/
+build.tar.gz

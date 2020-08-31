@@ -2,10 +2,14 @@
 	"parser": "@typescript-eslint/parser",
 	"env": {
 		"browser": true,
-		"es6": true,
-		"jest/globals": true
+		"es6": true
 	},
-	"extends": ["google", "prettier", "plugin:react/recommended"],
+	"extends": [
+		"google",
+		"prettier",
+		"plugin:react/recommended",
+		"prettier/react"
+	],
 	"rules": {
 		"linebreak-style": "off",
 		"eol-last": "off",
@@ -42,9 +46,10 @@
 		"no-invalid-this": 0,
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
-		"jest/no-identical-title": "error",
-		"jest/valid-expect": "error",
-		"@typescript-eslint/no-explicit-any": "off"
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/no-unused-vars": "error",
+		"no-unused-vars": "off"
 	},
 	"globals": {
 		"io": true,
@@ -63,7 +68,7 @@
 			"tsx": true
 		}
 	},
-	"plugins": ["react", "react-hooks", "prettier", "jest"],
+	"plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
 	"settings": {
 		"react": {
 			"createClass": "createReactClass",

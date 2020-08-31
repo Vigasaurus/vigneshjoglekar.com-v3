@@ -3,5 +3,4 @@ build/
 dist/
 .yarn/
 .vscode/
-src/css/built.css
 old/

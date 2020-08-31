@@ -4,3 +4,78 @@
 @tailwind utilities;
 
 /* Personal Styles */
+.tw {
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 300ms;
+}
+
+@font-face {
+	font-family: 'Karla';
+	src: url(../fonts/Karla/Karla-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Karla';
+	src: url(../fonts/Karla/Karla-Bold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Karla';
+	src: url(../fonts/Karla/Karla-Italic.ttf) format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Karla';
+	src: url(../fonts/Karla/Karla-BoldItalic.ttf) format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Grotesk';
+	src: url(../fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf) format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Grotesk';
+	src: url(../fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf) format('truetype');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Grotesk';
+	src: url(../fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf) format('truetype');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Grotesk';
+	src: url(../fonts/SpaceGrotesk/SpaceGrotesk-Light.ttf) format('truetype');
+	font-weight: 200;
+}
+@font-face {
+	font-family: 'Grotesk';
+	src: url(../fonts/SpaceGrotesk/SpaceGrotesk-SemiBold.ttf) format('truetype');
+	font-weight: 600;
+}
+
+.top-right-hidden {
+	top: -55px;
+	right: -55px;
+	padding-top: 60%;
+	z-index: 1;
+}
+
+.top-left-hidden {
+	top: -55px;
+	left: -55px;
+	padding-top: 40%;
+	z-index: 1;
+}
+
+.variant-smallcaps {
+	font-variant: small-caps;
+}

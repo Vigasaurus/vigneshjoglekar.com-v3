@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {}
 
 const About = (props: Props) => {
-	return <>About</>;
+	return <div className='w-full h-full flex flex-col tw'>About</div>;
 };
 
 export default About;

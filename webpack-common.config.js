@@ -1,12 +1,6 @@
 const path = require('path');
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-
-const paths = {
-	src: path.join(__dirname, 'src'),
-};
 
 module.exports = {
 	entry: {
@@ -30,6 +24,10 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ['ts-loader'],
 			},
+			{
+				test: /\.(ttf|otf|png|gif|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+				loader: 'file-loader?name=assets/[name].[ext]',
+			},
 		],
 	},
 	resolve: {
@@ -45,9 +43,6 @@ module.exports = {
 			filename: '[name].css',
 			chunkFilename: '[id].css',
 			ignoreOrder: false,
-		}),
-		new PurgecssPlugin({
-			paths: glob.sync(`${paths.src}/**/*`, { nodir: true }),
 		}),
 	],
 };
