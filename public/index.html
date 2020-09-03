@@ -6,9 +6,30 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="icon" type="image/png" href="/assets/Logo.png" />
 		<title>Vignesh Joglekar</title>
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = (window._paq = window._paq || []);
+			_paq.push(['trackPageView']);
+			(function() {
+				var u = '//analytics.vigneshjoglekar.com/';
+				_paq.push(['setTrackerUrl', u + 'a.php']);
+				_paq.push(['setSiteId', '3']);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.type = 'text/javascript';
+				g.async = true;
+				g.src = u + 'a.js';
+				s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<!-- End Matomo Code -->
 	</head>
 
-	<body style="margin: 0; height: 100vh; width: 100%;">
+	<body
+		class="tw bg-background-primary"
+		style="margin: 0; height: 100vh; min-height: 100vh; width: 100%;"
+	>
 		<div id="app" style="height: 100%; width: 100%;"></div>
 	</body>
 </html>

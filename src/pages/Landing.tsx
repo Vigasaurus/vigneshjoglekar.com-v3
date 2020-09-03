@@ -8,9 +8,10 @@ interface Props {}
 
 const Landing = () => {
 	const [mounted, setMounted] = useState(false);
+	const [portraitLoad, setPortraitLoad] = useState(false);
 
 	useEffect(() => {
-		setMounted(true);
+		setTimeout(() => setMounted(true), 50);
 		return () => {
 			setMounted(false);
 		};
@@ -18,8 +19,8 @@ const Landing = () => {
 
 	return (
 		<div
-			className={`bg-background-primary flex font-sans tw flex-grow md:flex-row xs:flex-col  ${
-				mounted ? 'opacity-100' : 'opacity-0'
+			className={`bg-background-primary flex tw flex-grow md:flex-row xs:flex-col  ${
+				mounted ? 'opacity-100 tw' : 'tw-longer opacity-0'
 			}`}
 		>
 			<div className='flex-grow bg-transparent md:block hidden' />
@@ -27,7 +28,9 @@ const Landing = () => {
 				<img
 					src='./assets/Portrait.png'
 					className='w-full relative z-10 xs:float-right'
+					onLoad={() => setPortraitLoad(true)}
 				/>
+				{!portraitLoad && <div className='portrait-placeholder' />}
 				<img
 					src='./assets/Dots.svg'
 					className='absolute left-0 w-1/4 z-20 xs:w-1/3'

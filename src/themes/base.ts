@@ -9,8 +9,8 @@ export default {
 	textSecondary: 'rgb(85, 82, 124)',
 	textTertiary: 'rgb(180, 178, 197)',
 	backgroundPrimary: 'rgb(255, 255, 255)',
-	backgroundSecondary: 'rgb(255,223,226)',
-	backgroundTertiary: 'rgb(228,228,255)',
+	backgroundSecondary: 'rgba(255,223,226, 0.4)',
+	backgroundTertiary: 'rgba(150,150,255, 0.15)',
 };
 
 // https://color.mediaandme.be/4mz8P6l--sJubvjaDA7DPEfCYMHLKdnG4mz8P5LIV6IqiiLa----PF-VucJavFza6

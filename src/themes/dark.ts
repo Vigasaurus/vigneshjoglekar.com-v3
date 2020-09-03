@@ -12,8 +12,8 @@ export default {
 	textSecondary: 'rgb(255, 244, 227)',
 	textTertiary: 'rgb(245, 245, 245)',
 	backgroundPrimary: 'rgb(31, 35, 36)',
-	backgroundSecondary: 'rgb(150, 0, 50, 0.5)',
-	backgroundTertiary: 'rgb(35, 38, 69, 0.6)',
+	backgroundSecondary: 'rgb(150, 0, 50, 0.1)',
+	backgroundTertiary: 'rgb(35, 38, 69, 0.2)',
 };
 
 // https://color.mediaandme.be/CWsHP6l--sJubvjaDA7DPEfCYMHLKdnG----PF-qusJrzVLa7oCaP9O0CZ8Z9aKy6

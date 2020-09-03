@@ -11,6 +11,22 @@
 	transition-duration: 300ms;
 }
 
+.tw-longer {
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 750ms;
+}
+
+.portrait-placeholder {
+	width: 100%;
+	background-color: #d9f4ff;
+	padding-top: 100%;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-top-left-radius: 50%;
+}
+
 @font-face {
 	font-family: 'Karla';
 	src: url(../fonts/Karla/Karla-Regular.ttf) format('truetype');
@@ -76,6 +92,14 @@
 	z-index: 1;
 }
 
-.variant-smallcaps {
-	font-variant: small-caps;
+.about-background {
+	top: 10%;
+	z-index: -1;
+	border-top-right-radius: 55px;
+	border-bottom-right-radius: 55px;
+	height: 115%;
+}
+
+.pb-1\/10 {
+	padding-bottom: 10%;
 }
