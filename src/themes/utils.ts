@@ -28,6 +28,8 @@ export const mapTheme: (variables: ITheme) => IMappedTheme = (
 		'--background-primary': variables.backgroundPrimary || '',
 		'--background-sec': variables.backgroundSecondary || '',
 		'--background-ter': variables.backgroundTertiary || '',
+		'--background-quat': variables.backgroundQuaternary || '',
+		'--background-quin': variables.backgroundQuinary || '',
 	};
 };
 
@@ -39,7 +41,7 @@ export const mapTheme: (variables: ITheme) => IMappedTheme = (
  * @return {void}
  */
 export const applyTheme = (theme: string): void => {
-	console.log('chaing theme', theme);
+	// console.log('chaing theme', theme);
 	const themeObject: IMappedTheme = mapTheme(themes[theme]);
 	if (!themeObject) return;
 	const root = document.documentElement;

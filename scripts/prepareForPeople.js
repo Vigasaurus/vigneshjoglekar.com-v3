@@ -10,12 +10,18 @@ const init = async () => {
 
 	const routes = [
 		'index',
-		...[...routeData.matchAll(/path=.*\/([a-zA-Z0-9]+)`/g)].map((e) => e[1]),
+		...[...routeData.matchAll(/path=.*\}([a-zA-Z0-9]+)`/g)].map((e) => e[1]),
 	];
 
 	routes.forEach(async (route) => {
 		await fs.writeFileSync(`dist/${route}.html`, indexData);
 	});
+
+	let cssData = await fs.readFileSync('dist/1.css', 'utf8');
+
+	cssData = cssData.replace(/\(\/assets/g, '(./assets');
+
+	await fs.writeFileSync('dist/1.css', cssData);
 };
 
 init();

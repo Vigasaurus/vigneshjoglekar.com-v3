@@ -93,13 +93,49 @@
 }
 
 .about-background {
-	top: 10%;
+	top: 6rem;
 	z-index: -1;
 	border-top-right-radius: 55px;
 	border-bottom-right-radius: 55px;
 	height: 115%;
 }
 
+.projects-background {
+	top: 6rem;
+	z-index: -1;
+	border-top-left-radius: 55px;
+	border-bottom-left-radius: 55px;
+	height: 75%;
+}
+
 .pb-1\/10 {
 	padding-bottom: 10%;
+}
+
+.projectHoverItem.clicked {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.projectItem:hover > .projectHoverItem {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.projectHoverItem:hover {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.projectHoverItem {
+	background-color: rgba(85, 82, 124, 0.95);
+	transform: translateY(16rem);
+	opacity: 0;
+	transition: transform 0.4s 0s ease-in-out, opacity 0.4s ease-in-out;
+	top: 1rem;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
 }

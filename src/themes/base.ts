@@ -11,6 +11,8 @@ export default {
 	backgroundPrimary: 'rgb(255, 255, 255)',
 	backgroundSecondary: 'rgba(255,223,226, 0.4)',
 	backgroundTertiary: 'rgba(150,150,255, 0.15)',
+	backgroundQuaternary: 'rgb(233, 249, 255)',
+	backgroundQuinary: 'rgb(211, 173, 255)',
 };
 
 // https://color.mediaandme.be/4mz8P6l--sJubvjaDA7DPEfCYMHLKdnG4mz8P5LIV6IqiiLa----PF-VucJavFza6

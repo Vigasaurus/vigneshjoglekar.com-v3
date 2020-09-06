@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect, MouseEvent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { themeContext } from '../contexts/theme.context';
+import { useScreenClass } from '../hooks/screenClass.hook';
+import { HamburgerSliderReverse } from 'react-animated-burgers';
 
 // Import Assets Required by this page
 require('../assets/LogoDark.svg');
@@ -10,46 +12,102 @@ interface NavProps {
 	to: string;
 	children: string;
 	active: boolean;
-	// onClick: (event: MouseEvent) => void;
 }
 
-const NavItem = (props: NavProps) => (
-	<Link
-		to={props.to}
-		className={`text-text-primary mx-4 text-lg font-body font-bold hover:text-secondary tw ${
-			props.active ? 'underline' : ''
-		}`}
-	>
-		{props.children.toUpperCase()}
-	</Link>
-);
-
-// const dropdown: React.Ref<HTMLDivElement> = React.createRef();
+const dropdown: React.Ref<HTMLDivElement> = React.createRef();
+const burger: React.Ref<HTMLDivElement> = React.createRef();
 
 const Header: React.FC = () => {
 	const { theme, swapCurrentTheme: swapTheme } = useContext(themeContext);
 	const location = useLocation();
 	const [localTheme, setLocalTheme] = useState(theme);
-	// const [dropdownShowing, setDropdownShowing] = useState(false);
+	const { screenClassIndex } = useScreenClass();
+	const [dropdownShowing, setDropdownShowing] = useState(false);
 
 	useEffect(() => {
 		setTimeout(() => setLocalTheme(theme), 200);
 	}, [theme]);
 
-	// const handleDocumentClick = (e: Event) => {
-	// 	if (!dropdown || !dropdown.current.contains(e.target)) {
-	// 		setDropdownShowing(false);
-	// 		document.removeEventListener('click', handleDocumentClick);
-	// 	}
-	// };
+	const handleDocumentClick = (e: Event) => {
+		if (
+			dropdown?.current &&
+			burger?.current &&
+			e.target instanceof Node &&
+			!dropdown.current.contains(e.target) &&
+			!burger.current.contains(e.target)
+		) {
+			setDropdownShowing(false);
+			document.removeEventListener('click', handleDocumentClick);
+		}
+	};
+
+	const NavItem = (props: NavProps) =>
+		props.active ? (
+			<p
+				className={`
+					text-secondary mx-2 xs:text-lg md:text-md lg:text-lg font-body font-bold tw underline cursor-default
+					${screenClassIndex <= 1 ? 'py-1' : ''}
+				`}
+				style={{ width: 'max-content' }}
+			>
+				{props.children}
+			</p>
+		) : (
+			<Link
+				to={props.to}
+				className={`
+					text-text-primary mx-2 xs:text-lg md:text-md lg:text-lg font-body font-bold hover:text-secondary tw
+					${screenClassIndex <= 1 ? 'py-1' : ''}
+				`}
+				style={{ width: 'max-content' }}
+				onClick={() => setDropdownShowing(false)}
+			>
+				{props.children}
+			</Link>
+		);
+
+	const renderMenuItems = (): React.ReactNode => {
+		return (
+			<>
+				<NavItem to='./about' active={location.pathname === '/about'}>
+					About
+				</NavItem>
+				<NavItem to='./expertise' active={location.pathname === '/experise'}>
+					Skills
+				</NavItem>
+				<NavItem to='./projects' active={location.pathname === '/projects'}>
+					Works
+				</NavItem>
+				<NavItem to='./service' active={location.pathname === '/service'}>
+					Service
+				</NavItem>
+				<NavItem to='./contact' active={location.pathname === '/contact'}>
+					Contact
+				</NavItem>
+				<div className='flex-grow md:block hidden' />
+				<button
+					title='Swap Site Theme'
+					onClick={() => {
+						swapTheme();
+					}}
+					className={`text-text-primary hover:text-tertiary ${
+						screenClassIndex <= 1 ? 'absolute' : ''
+					}`}
+					style={{ right: screenClassIndex <= 1 ? '3rem' : '' }}
+				>
+					{localTheme === 'base' ? 'Swap Theme ☀' : 'Swap Theme 🌑'}
+				</button>
+			</>
+		);
+	};
 
 	return (
 		<div
-			className={`w-full bg-background-primary flex m-0 justify-between items-center tw md:px-24 px-12 py-4`}
+			className={`w-full bg-background-primary flex m-0 justify-between items-center tw px-6 md:px-16 lg:px-24 max-h-16 py-4`}
 		>
-			<Link to='./'>
+			<Link to='./' className='z-40'>
 				<img
-					className='md:w-10 h-full'
+					className='h-full'
 					src={
 						localTheme === 'base'
 							? './assets/LogoDark.svg'
@@ -58,34 +116,39 @@ const Header: React.FC = () => {
 				/>
 			</Link>
 			<div className='flex-grow' />
-			<NavItem to='./about' active={location.pathname === '/about'}>
-				About
-			</NavItem>
-			<NavItem
-				to='./qualifications'
-				active={location.pathname === '/qualifications'}
+			{screenClassIndex <= 1 && (
+				<div
+					className='cursor-pointer z-40'
+					onClick={() => {
+						if (!dropdownShowing) {
+							setDropdownShowing(true);
+							document.addEventListener('click', handleDocumentClick);
+						} else {
+							setDropdownShowing(false);
+							document.removeEventListener('click', handleDocumentClick);
+						}
+					}}
+					ref={burger}
+				>
+					<HamburgerSliderReverse
+						isActive={dropdownShowing}
+						barColor={localTheme === 'base' ? '#000' : '#fff'}
+						buttonColor='transparent'
+						buttonWidth={30}
+					/>
+				</div>
+			)}
+
+			<div
+				className={`z-30 bg-background-quinary w-full absolute top-0 left-0 px-8 pt-20 pb-4 flex flex-col transform transition-transform duration-500 ${
+					dropdownShowing ? 'translate-y-0' : '-translate-y-full'
+				} ${screenClassIndex <= 1 ? '' : 'hidden'}`}
+				ref={dropdown}
+				tabIndex={screenClassIndex <= 1 && dropdownShowing ? 0 : -1}
 			>
-				Expertise
-			</NavItem>
-			<NavItem to='./projects' active={location.pathname === '/projects'}>
-				Works
-			</NavItem>
-			<NavItem to='./service' active={location.pathname === '/service'}>
-				Service
-			</NavItem>
-			<NavItem to='./contact' active={location.pathname === '/contact'}>
-				Contact
-			</NavItem>
-			<div className='flex-grow md:block hidden' />
-			<button
-				title='Swap Site Theme'
-				onClick={() => {
-					swapTheme();
-				}}
-				className='text-text-primary hover:text-tertiary'
-			>
-				Swap Theme
-			</button>
+				{renderMenuItems()}
+			</div>
+			{screenClassIndex >= 2 && renderMenuItems()}
 		</div>
 	);
 };

@@ -22,6 +22,8 @@ module.exports = {
 				'background-primary': 'var(--background-primary)',
 				'background-secondary': 'var(--background-sec)',
 				'background-tertiary': 'var(--background-ter)',
+				'background-quaternary': 'var(--background-quat)',
+				'background-quinary': 'var(--background-quin)',
 			},
 		},
 		backgroundColor: (theme) => ({

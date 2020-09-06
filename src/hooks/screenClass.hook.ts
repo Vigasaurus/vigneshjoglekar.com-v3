@@ -30,8 +30,10 @@ export const useScreenClass = () => {
 	}, []);
 
 	let screenClass = '';
-	screens.reverse().forEach((screen) => {
-		if (windowSize.width > screen.min) screenClass = screen.size;
+	screens.forEach((screen) => {
+		if (windowSize.width > screen.min) {
+			screenClass = screen.size;
+		}
 	});
 
 	return {

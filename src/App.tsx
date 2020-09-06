@@ -1,3 +1,6 @@
+// Design Cues taken from https://nero-portfolio.webflow.io/
+// Icons from https://icons8.com
+
 import React, { useEffect } from 'react';
 import {
 	BrowserRouter as Router,
@@ -9,7 +12,7 @@ import {
 	Landing,
 	About,
 	Projects,
-	Qualifications,
+	Expertise,
 	Service,
 	Secret,
 	NotFound,
@@ -18,6 +21,8 @@ import {
 import { themeContext } from './contexts/theme.context';
 import { useTheme } from './hooks/theme.hook';
 import { applyTheme } from './themes/utils';
+import { useProjectCard } from './hooks/projectCard.hook';
+import { projectCardContext } from './contexts/projectCard.context';
 import Header from './reusable/Header';
 
 // Import Static Assets Requested by Static Pages
@@ -50,7 +55,7 @@ const App = () => {
 				<Route exact path={`${prefix}`} component={Landing} />
 				<Route path={`${prefix}about`} component={About} />
 				<Route path={`${prefix}projects`} component={Projects} />
-				<Route path={`${prefix}qualifications`} component={Qualifications} />
+				<Route path={`${prefix}expertise`} component={Expertise} />
 				<Route path={`${prefix}service`} component={Service} />
 				<Route path={`${prefix}contact`} component={Contact} />
 				<Route path={`${prefix}secret`} component={Secret} secret />
@@ -62,6 +67,7 @@ const App = () => {
 
 export const AppWrapper = () => {
 	const theme = useTheme();
+	const activeCard = useProjectCard();
 
 	useEffect(() => {
 		applyTheme(theme.theme);
@@ -73,11 +79,13 @@ export const AppWrapper = () => {
 
 	return (
 		<themeContext.Provider value={theme}>
-			<div className='w-full h-full flex flex-col bg-background-primary'>
-				<Router>
-					<App />
-				</Router>
-			</div>
+			<projectCardContext.Provider value={activeCard}>
+				<div className='w-full h-full flex flex-col bg-background-primary'>
+					<Router>
+						<App />
+					</Router>
+				</div>
+			</projectCardContext.Provider>
 		</themeContext.Provider>
 	);
 };
