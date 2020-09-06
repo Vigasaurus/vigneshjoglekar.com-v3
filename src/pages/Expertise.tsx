@@ -31,7 +31,7 @@ require('../assets/Prettier.svg');
 const Expertise = () => {
 	const [mounted, setMounted] = useState(false);
 	const expertiseBase =
-		'w-full md:w-2/5 min-h-56 py-4 bg-background-primary flex flex-col mx-2 md:mx-8';
+		'w-full md:w-2/5 min-h-56 py-4 bg-background-primary flex flex-col mx-2 md:mx-8 tw';
 	const expertiseStyle = {
 		borderRadius: '1rem',
 		boxShadow: '0px 0px 50px -10px var(--color-accent-trans)',

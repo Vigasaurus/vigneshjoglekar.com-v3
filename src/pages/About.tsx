@@ -31,16 +31,18 @@ const About = () => {
 					developer for 5 years, I strive to create user-friendly, responsive,
 					and privacy-first websites and applications. After working with
 					clients big and small, with robust teams as well as individually, I
-					strive to ensure security, privacy, and usability for all products.
+					always strive to ensure security, privacy, and usability for all
+					products.
 					<br />
 					<br />
 					Over the past 2 years, I've worked to further my technical experience,
 					creating user-first websites and apps, but also by working closely as
-					a technical liaison for a design and branding agency, handling
-					responsibilities from basic web security to complex user privacy and
-					access decisions while developing and directing the creation of a web
-					and mobile application to streamline food-event Party Planning. I've
-					also successfully led teams to accomplish both technical and
+					a technical liaison for a design and branding agency. At first, only
+					handling responsibilities like basic web security, and
+					troubleshooting. Eventually transitioning to complex user privacy and
+					experience decisions while developing and directing the creation of a
+					web and mobile application to streamline food-event Party Planning.
+					I've also successfully led teams to accomplish both technical and
 					interpersonal goals in my past experiences and as a Senior Resident
 					Advisor.
 					<br />
