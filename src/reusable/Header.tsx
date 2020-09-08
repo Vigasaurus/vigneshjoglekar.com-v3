@@ -45,7 +45,7 @@ const Header: React.FC = () => {
 		props.active ? (
 			<p
 				className={`
-					text-secondary mx-2 xs:text-lg md:text-md lg:text-lg font-body font-bold tw underline cursor-default
+					text-secondary mx-2 xs:text-lg md:text-md lg:text-lg font-body font-bold tw cursor-default
 					${screenClassIndex <= 1 ? 'py-1' : ''}
 				`}
 				style={{ width: 'max-content' }}
@@ -69,19 +69,19 @@ const Header: React.FC = () => {
 	const renderMenuItems = (): React.ReactNode => {
 		return (
 			<>
-				<NavItem to='./about' active={location.pathname === '/about'}>
+				<NavItem to='./about' active={location.pathname.endsWith('about')}>
 					About
 				</NavItem>
-				<NavItem to='./expertise' active={location.pathname === '/experise'}>
+				<NavItem to='./skills' active={location.pathname.endsWith('skills')}>
 					Skills
 				</NavItem>
-				<NavItem to='./projects' active={location.pathname === '/projects'}>
+				<NavItem to='./works' active={location.pathname.endsWith('works')}>
 					Works
 				</NavItem>
-				<NavItem to='./service' active={location.pathname === '/service'}>
+				<NavItem to='./service' active={location.pathname.endsWith('service')}>
 					Service
 				</NavItem>
-				<NavItem to='./contact' active={location.pathname === '/contact'}>
+				<NavItem to='./contact' active={location.pathname.endsWith('contact')}>
 					Contact
 				</NavItem>
 				<div className='flex-grow md:block hidden' />

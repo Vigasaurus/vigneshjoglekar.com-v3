@@ -100,6 +100,14 @@
 	height: 115%;
 }
 
+.service-background {
+	top: 6rem;
+	z-index: -1;
+	border-top-right-radius: 55px;
+	border-bottom-right-radius: 55px;
+	height: 50%;
+}
+
 .projects-background {
 	top: 6rem;
 	z-index: -1;

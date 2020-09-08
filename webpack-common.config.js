@@ -40,8 +40,8 @@ module.exports = {
 			inject: true,
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css',
+			filename: '[name].[hash].css',
+			chunkFilename: 'built.[hash].css',
 			ignoreOrder: false,
 		}),
 	],

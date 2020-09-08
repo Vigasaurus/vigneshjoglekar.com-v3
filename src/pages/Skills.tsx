@@ -1,34 +1,35 @@
 import React, { useEffect, useState } from 'react';
 
 // Import Assets Required by this page
+// TODO: Import better
 // Front-End
-require('../assets/Front.png');
-require('../assets/React.svg');
-require('../assets/Figma.svg');
-require('../assets/Sass.svg');
-require('../assets/Tailwind.svg');
-require('../assets/Gatsby.svg');
+require('../assets/skills/Front.png');
+require('../assets/skills/React.svg');
+require('../assets/skills/Figma.svg');
+require('../assets/skills/Sass.svg');
+require('../assets/skills/Tailwind.svg');
+require('../assets/skills/Gatsby.svg');
 // Back-End
-require('../assets/Back.png');
-require('../assets/Typescript.svg');
-require('../assets/Node.svg');
-require('../assets/MySQL.svg');
-require('../assets/Mongo.svg');
-require('../assets/Express.svg');
+require('../assets/skills/Back.png');
+require('../assets/skills/Typescript.svg');
+require('../assets/skills/Node.svg');
+require('../assets/skills/MySQL.svg');
+require('../assets/skills/Mongo.svg');
+require('../assets/skills/Express.svg');
 // DevOps
-require('../assets/DevOps.png');
-require('../assets/AWS.svg');
-require('../assets/Nginx.svg');
-require('../assets/Docker.svg');
-require('../assets/PM2.svg');
+require('../assets/skills/DevOps.png');
+require('../assets/skills/AWS.svg');
+require('../assets/skills/Nginx.svg');
+require('../assets/skills/Docker.svg');
+require('../assets/skills/PM2.svg');
 // Maintenance
-require('../assets/Security.png');
-require('../assets/Postman.svg');
-require('../assets/Jest.svg');
-require('../assets/ESLint.svg');
-require('../assets/Prettier.svg');
+require('../assets/skills/Security.png');
+require('../assets/skills/Postman.svg');
+require('../assets/skills/Jest.svg');
+require('../assets/skills/ESLint.svg');
+require('../assets/skills/Prettier.svg');
 
-const Expertise = () => {
+const Skills = () => {
 	const [mounted, setMounted] = useState(false);
 	const expertiseBase =
 		'w-full md:w-2/5 min-h-56 py-4 bg-background-primary flex flex-col mx-2 md:mx-8 tw';
@@ -176,7 +177,7 @@ const Expertise = () => {
 	);
 };
 
-export default Expertise;
+export default Skills;
 
 /*
     Displays your technical skills

@@ -1,7 +1,13 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+	output: {
+		path: __dirname + '/dist',
+		publicPath: '/',
+		filename: '[name].[hash].js',
+	},
 	module: {
 		rules: [
 			{
@@ -16,11 +22,7 @@ module.exports = {
 			},
 		],
 	},
-	output: {
-		path: __dirname + '/dist',
-		publicPath: '/',
-		filename: '[name].[hash].js',
-	},
+	plugins: [new CleanWebpackPlugin()],
 	optimization: {
 		minimizer: [new OptimizeCSSAssetsPlugin()],
 		splitChunks: {

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import Project from '../components/Project';
 import { projectCardContext } from '../contexts/projectCard.context';
 
-const Projects = () => {
+const Works = () => {
 	const [mounted, setMounted] = useState(false);
 	const { activeCard, setActiveCard } = useContext(projectCardContext);
 
@@ -115,7 +115,7 @@ const Projects = () => {
 	);
 };
 
-export default Projects;
+export default Works;
 
 /*
     Describes technical projects you have completed or would like to complete

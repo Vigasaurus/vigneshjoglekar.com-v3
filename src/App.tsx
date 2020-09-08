@@ -11,8 +11,8 @@ import {
 import {
 	Landing,
 	About,
-	Projects,
-	Expertise,
+	Works,
+	Skills,
 	Service,
 	Secret,
 	NotFound,
@@ -44,7 +44,17 @@ const App = () => {
 		: '/';
 
 	useEffect(() => {
+		const pages = ['about', 'works', 'skills', 'service', 'contact', 'secret']; // TODO: Include 404 Handling
+		const cleanedPath = location.pathname.split('/').slice(-1)[0];
+		document.title = `Vignesh Joglekar${
+			pages.includes(cleanedPath)
+				? ' | ' + cleanedPath[0].toUpperCase() + cleanedPath.substr(1)
+				: ''
+		}`;
+
 		window._paq.push(['setCustomUrl', location.pathname]);
+		window._paq.push(['setDocumentTitle', document.title]);
+		window._paq.push(['enableLinkTracking']);
 		window._paq.push(['trackPageView']);
 	}, [location]);
 
@@ -54,8 +64,8 @@ const App = () => {
 			<Switch>
 				<Route exact path={`${prefix}`} component={Landing} />
 				<Route path={`${prefix}about`} component={About} />
-				<Route path={`${prefix}projects`} component={Projects} />
-				<Route path={`${prefix}expertise`} component={Expertise} />
+				<Route path={`${prefix}skills`} component={Skills} />
+				<Route path={`${prefix}works`} component={Works} />
 				<Route path={`${prefix}service`} component={Service} />
 				<Route path={`${prefix}contact`} component={Contact} />
 				<Route path={`${prefix}secret`} component={Secret} secret />
