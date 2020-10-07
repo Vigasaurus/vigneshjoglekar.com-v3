@@ -98,7 +98,7 @@ const Works = () => {
 						logo='https://raw.githubusercontent.com/Vigasaurus/vigneshjoglekar.com/master/public/icon/512x512.png'
 						gradient={['#ed76ff', '#512155']}
 						contentWidthClass='w-1/2'
-						link='https://vigneshjoglekar.com'
+						link='https://2019.vigneshjoglekar.com'
 						source='https://github.com/Vigasaurus/vigneshjoglekar.com'
 						description='Version 2 of my portfolio website, 2017-2020'
 					/>
