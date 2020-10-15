@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -22,7 +23,10 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [new CleanWebpackPlugin()],
+	plugins: [
+		new CopyWebpackPlugin({ patterns: [{ from: 'public', to: './' }] }),
+		new CleanWebpackPlugin(),
+	],
 	optimization: {
 		minimizer: [new OptimizeCSSAssetsPlugin()],
 		splitChunks: {
