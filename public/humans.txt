@@ -1,0 +1,11 @@
+/* TEAM */
+	Author: Vignesh Joglekar
+	Contact: vigneshjoglekar4[at]gmail.com
+	Website: http://vigneshjoglekar.com
+	Twitter: @Vigasaurus
+	From: Coppell, TX, USA
+
+/* SITE */
+	Language:  English
+	Standards: HTML5, CSS3, ES7
+	Components: React.js, Tailwind.css, Typescript
