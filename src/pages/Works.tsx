@@ -116,8 +116,3 @@ const Works = () => {
 };
 
 export default Works;
-
-/*
-    Describes technical projects you have completed or would like to complete
-    May include links to your GitHub repository for these projects, thumbnails, and descriptions
-*/

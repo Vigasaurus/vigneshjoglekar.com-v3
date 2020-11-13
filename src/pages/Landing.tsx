@@ -57,8 +57,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-/*
-    Gives the first impression you want a prospective employer or client to see
-    Engages the audience to want to explore more
-*/

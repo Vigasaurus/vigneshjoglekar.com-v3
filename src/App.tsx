@@ -8,16 +8,7 @@ import {
 	Switch,
 	useLocation,
 } from 'react-router-dom';
-import {
-	Landing,
-	About,
-	Works,
-	Skills,
-	Service,
-	Secret,
-	NotFound,
-	Contact,
-} from './pages/';
+import { Landing, About, Works, Skills, NotFound, Contact } from './pages/';
 import { themeContext } from './contexts/theme.context';
 import { useTheme } from './hooks/theme.hook';
 import { applyTheme } from './themes/utils';
@@ -44,7 +35,7 @@ const App = () => {
 		: '/';
 
 	useEffect(() => {
-		const pages = ['about', 'works', 'skills', 'service', 'contact', 'secret']; // TODO: Include 404 Handling
+		const pages = ['about', 'works', 'skills', 'service', 'contact', 'secret'];
 		const cleanedPath = location.pathname.split('/').slice(-1)[0];
 		document.title = `Vignesh Joglekar${
 			pages.includes(cleanedPath)
@@ -66,9 +57,7 @@ const App = () => {
 				<Route path={`${prefix}about`} component={About} />
 				<Route path={`${prefix}skills`} component={Skills} />
 				<Route path={`${prefix}works`} component={Works} />
-				<Route path={`${prefix}service`} component={Service} />
 				<Route path={`${prefix}contact`} component={Contact} />
-				<Route path={`${prefix}secret`} component={Secret} secret />
 				<Route component={NotFound} />
 			</Switch>
 		</>

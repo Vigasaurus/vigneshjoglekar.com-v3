@@ -22,7 +22,6 @@ const NotFound = () => {
 			{ name: 'me', link: './about' },
 			{ name: "what I've done", link: './works' },
 			{ name: 'what I do best', link: './skills' },
-			{ name: 'what I do for my community', link: './service' },
 			{ name: 'how to get in touch with me', link: './contact' },
 		];
 		setChosenRedirect(options[Math.floor(Math.random() * options.length)]);
@@ -34,7 +33,13 @@ const NotFound = () => {
 				mounted ? 'opacity-100 tw' : 'tw-longer opacity-0'
 			}`}
 		>
-			<div className='w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 bg-transparent mt-16 md:ml-16 lg:ml-40 pt-0 xs:mx-5 xs:px-4 pb-1/10'>
+			<div
+				className='w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 pt-16 md:pl-32 md:pr-24 mt-8 md:mr-0 xs:mr-5 xs:pl-12 xs:pr-6 pb-16 mb-32 bg-background-tertiary'
+				style={{
+					borderTopRightRadius: '4rem',
+					borderBottomRightRadius: '4rem',
+				}}
+			>
 				<h1 className='text-text-primary lg:text-6xl text-5xl font-bold leading-none font-title space-y-0'>
 					Hey, this page doesn't seem&nbsp;to&nbsp;
 					<span className='text-secondary'>exist</span>, sadly
@@ -49,7 +54,6 @@ const NotFound = () => {
 					</Link>
 					, instead!
 				</h3>
-				<div className='absolute left-0 w-3/4 lg:w-3/5 bg-background-tertiary about-background' />
 			</div>
 		</div>
 	);

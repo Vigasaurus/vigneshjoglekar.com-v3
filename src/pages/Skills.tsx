@@ -32,7 +32,7 @@ require('../assets/skills/Prettier.svg');
 const Skills = () => {
 	const [mounted, setMounted] = useState(false);
 	const expertiseBase =
-		'w-full md:w-2/5 min-h-56 py-4 bg-background-primary flex flex-col mx-2 md:mx-8 tw';
+		'w-full md:w-2/5 min-h-56 py-4 bg-background-primary flex flex-col mx-2 md:mx-8 tw justify-between';
 	const expertiseStyle = {
 		borderRadius: '1rem',
 		boxShadow: '0px 0px 50px -10px var(--color-accent-trans)',
@@ -72,11 +72,6 @@ const Skills = () => {
 					<h3 className='text-text-secondary xs:text-md md:text-lg lg:text-xl text-lg font-thin mt-7 font-body'>
 						Below are the areas of web-development that I involve myself in, as
 						well as the technologies I'm most experienced in for each of them.
-						Check out my{' '}
-						<a href='./Vignesh Joglekar.pdf' className='text-secondary'>
-							resume
-						</a>{' '}
-						for more of what I've done!
 					</h3>
 				</div>
 				<div className='flex w-full flex-wrap align-center'>
@@ -87,7 +82,7 @@ const Skills = () => {
 								Front-End
 							</p>
 						</div>
-						<div className='w-full px-8'>
+						<div className='w-full px-8 mb-8'>
 							<p className='text-text-primary font-body text-lg'>
 								As much as we all love using CLIs and writing our own network
 								requests, a front-end is at the very least a nice-to-have for an
@@ -95,7 +90,7 @@ const Skills = () => {
 								just icing.
 							</p>
 						</div>
-						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around mt-5'>
+						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around'>
 							<ToolLogo src='React' title='React.js' />
 							<ToolLogo src='Figma' title='Figma' />
 							<ToolLogo src='Tailwind' title='Tailwind.css' />
@@ -110,14 +105,14 @@ const Skills = () => {
 								Back-End
 							</p>
 						</div>
-						<div className='w-full px-8'>
+						<div className='w-full px-8 mb-8'>
 							<p className='text-text-primary font-body text-lg'>
 								Whether it's producing fault and attack resistant APIs or simply
 								ensuring our application has every endpoint a user may ever need
 								- back-end development ultimately powers every app, ever.
 							</p>
 						</div>
-						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around mt-5'>
+						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around'>
 							<ToolLogo src='Node' title='Node.js' />
 							<ToolLogo src='Typescript' title='Typescript' />
 							<ToolLogo src='Express' title='Express' />
@@ -132,7 +127,7 @@ const Skills = () => {
 								DevOps
 							</p>
 						</div>
-						<div className='w-full px-8'>
+						<div className='w-full px-8 mb-8'>
 							<p className='text-text-primary font-body text-lg'>
 								Between deploying production applications to edges worldwide, to
 								ensuring development/monitoring environments are secure and
@@ -140,7 +135,7 @@ const Skills = () => {
 								development cycle.
 							</p>
 						</div>
-						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around mt-5'>
+						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around'>
 							<ToolLogo src='AWS' title='Amazon Web Services' />
 							<ToolLogo src='Nginx' title='Nginx' />
 							<ToolLogo src='PM2' title='PM2' />
@@ -157,14 +152,14 @@ const Skills = () => {
 								Maintenance
 							</p>
 						</div>
-						<div className='w-full px-8'>
+						<div className='w-full px-8 mb-8'>
 							<p className='text-text-primary font-body text-lg'>
-								Everything from Security to Testing to Code Quality - some of
-								the least appreciated aspects of web development, but some of my
-								all-time favorite.
+								Everything from Security to Testing to Code Quality - easily
+								some of the least appreciated aspects of web development and
+								longevity, but some of my all-time favorite.
 							</p>
 						</div>
-						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around mt-5'>
+						<div className='w-full px-4 md:px-8 flex flex-row h-12 justify-around'>
 							<ToolLogo src='Postman' title='Postman' />
 							<ToolLogo src='Prettier' title='Prettier' />
 							<ToolLogo src='ESLint' title='ESLint' />
@@ -178,9 +173,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-/*
-    Displays your technical skills
-    Discuss what areas of Computer Science you like
-    Includes your resume (PDF format preferred but HTML acceptable)
-*/

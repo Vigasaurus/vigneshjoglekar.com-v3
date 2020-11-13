@@ -78,9 +78,9 @@ const Header: React.FC = () => {
 				<NavItem to='./works' active={location.pathname.endsWith('works')}>
 					Works
 				</NavItem>
-				<NavItem to='./service' active={location.pathname.endsWith('service')}>
+				{/* <NavItem to='./service' active={location.pathname.endsWith('service')}>
 					Service
-				</NavItem>
+				</NavItem> */}
 				<NavItem to='./contact' active={location.pathname.endsWith('contact')}>
 					Contact
 				</NavItem>

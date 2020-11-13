@@ -43,8 +43,3 @@ const Service = () => {
 };
 
 export default Service;
-
-/*
-    Describe your volunteer work or ways you give back to your community
-    May include areas you would like to contribute to if not already
-*/

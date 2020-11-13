@@ -16,7 +16,13 @@ const About = () => {
 				mounted ? 'opacity-100 tw' : 'tw-longer opacity-0'
 			}`}
 		>
-			<div className='w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 bg-transparent mt-16 md:ml-16 lg:ml-40 pt-0 xs:mx-5 xs:px-4 pb-1/10'>
+			<div
+				className='w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 pt-16 md:pl-32 md:pr-24 mt-8 md:mr-0 xs:mr-5 xs:pl-12 xs:pr-6 pb-16 mb-32 bg-background-tertiary'
+				style={{
+					borderTopRightRadius: '4rem',
+					borderBottomRightRadius: '4rem',
+				}}
+			>
 				<h1 className='text-text-primary lg:text-6xl text-5xl font-bold leading-none font-title space-y-0'>
 					Hey, I'm&nbsp;<span className='text-secondary'>Vignesh</span>, web
 					developer and student
@@ -68,17 +74,9 @@ const About = () => {
 					team, as I am leading one - with deeply rooted principles of quality,
 					tenacity, and free and open learning.
 				</h3>
-				<div className='absolute left-0 w-3/4 lg:w-3/5 bg-background-tertiary about-background' />
 			</div>
 		</div>
 	);
 };
 
 export default About;
-
-/*
-
-    Includes any interesting information that a prospective employer or organization would want to know
-    Helps others see how you would fit on their team and in their corporate culture
-
-		*/
