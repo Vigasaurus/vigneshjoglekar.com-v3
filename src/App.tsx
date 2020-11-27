@@ -19,14 +19,6 @@ import Header from './reusable/Header';
 // Import Static Assets Requested by Static Pages
 require('./assets/Logo.png');
 
-// Matomo Object
-declare global {
-	interface Window {
-		_paq: Array<Array<string>>;
-	}
-}
-window._paq = window._paq || {};
-
 const App = () => {
 	const location = useLocation();
 
@@ -42,11 +34,6 @@ const App = () => {
 				? ' | ' + cleanedPath[0].toUpperCase() + cleanedPath.substr(1)
 				: ''
 		}`;
-
-		window._paq.push(['setCustomUrl', location.pathname]);
-		window._paq.push(['setDocumentTitle', document.title]);
-		window._paq.push(['enableLinkTracking']);
-		window._paq.push(['trackPageView']);
 	}, [location]);
 
 	return (
