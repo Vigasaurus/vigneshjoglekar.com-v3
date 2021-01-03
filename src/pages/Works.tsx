@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Project from '../components/Project';
 import { projectCardContext } from '../contexts/projectCard.context';
+import { themeContext } from '../contexts/theme.context';
 
 const Works = () => {
+	const { theme } = useContext(themeContext);
 	const [mounted, setMounted] = useState(false);
 	const { activeCard, setActiveCard } = useContext(projectCardContext);
 
@@ -64,7 +66,7 @@ const Works = () => {
 						gradient={['#0a7641', '#25c977']}
 						contentWidthClass='w-1/2'
 						link='https://potluckparty.com'
-						description='Project manager and lead developer of startup Party Planning application, launching Q3 2020'
+						description='Project manager and lead developer of startup Party Planning application, launching 2021'
 					/>
 					<Project
 						name='Secret Hitler'
@@ -73,16 +75,16 @@ const Works = () => {
 						contentWidthClass='w-full'
 						link='https://secrethitler.io'
 						source='https://github.com/cozuya/secret-hitler'
-						description='Major contributor and maintainer of the online-adaptation of the hit board game'
+						description='Major contributor and maintainer of the open-source online adaptation of the hit board game'
 					/>
 					<Project
-						name='Aggie Web Developers'
-						logo='https://aggiedevelopers.com/images/AWD-logo.png'
-						gradient={['#21145e', '#6548f2']}
-						contentWidthClass='w-1/2'
-						link='https://aggiedevelopers.com/'
-						source='https://github.com/Aggie-Web-Developers/awd-website'
-						description='Contributor and Vice President of organization aiming to empower budding web developers'
+						name='Plausible Analytics'
+						logo={`https://raw.githubusercontent.com/plausible/analytics/master/assets/static/images/icon/plausible_logo_300px_dark.png`}
+						gradient={['#10a4cb', '#51beda']}
+						contentWidthClass='w-48'
+						link='https://plausible.io/'
+						source='https://github.com/plausible/analytics'
+						description='Active and prolific contributor of various major features, proud user and proponent'
 					/>
 					<Project
 						name='Lighthouse Report Generator'
@@ -94,10 +96,19 @@ const Works = () => {
 						description='Author of unofficial Google Lighthouse port for Firefox'
 					/>
 					<Project
+						name='Aggie Web Developers'
+						logo='https://aggiedevelopers.com/images/AWD-logo.png'
+						gradient={['#39278b', '#6548f2']}
+						contentWidthClass='w-1/3'
+						link='https://aggiedevelopers.com/'
+						source='https://github.com/Aggie-Web-Developers/awd-website'
+						description='Contributor and Vice President of organization aiming to empower budding web developers'
+					/>
+					<Project
 						name='Portfolio Site V2'
 						logo='https://raw.githubusercontent.com/Vigasaurus/vigneshjoglekar.com/master/public/icon/512x512.png'
-						gradient={['#ed76ff', '#512155']}
-						contentWidthClass='w-1/2'
+						gradient={['#ed76ff', '#913999']}
+						contentWidthClass='w-1/3'
 						link='https://2019.vigneshjoglekar.com'
 						source='https://github.com/Vigasaurus/vigneshjoglekar.com'
 						description='Version 2 of my portfolio website, 2017-2020'

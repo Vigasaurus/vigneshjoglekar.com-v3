@@ -23,7 +23,7 @@ module.exports = {
 		publicPath: '/',
 		hot: true,
 		open: true,
-		port: 4000,
+		port: 8000,
 		disableHostCheck: true,
 		public: 'dev.vigneshjoglekar.com',
 		historyApiFallback: true,
