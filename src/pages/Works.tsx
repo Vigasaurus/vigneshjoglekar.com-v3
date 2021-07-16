@@ -66,7 +66,7 @@ const Works = () => {
 						gradient={['#0a7641', '#25c977']}
 						contentWidthClass='w-1/2'
 						link='https://potluckparty.com'
-						description='Project manager and lead developer of startup Party Planning application, launching 2021'
+						description='Project manager and lead developer of startup food-event Party Planning application, launching 2021'
 					/>
 					<Project
 						name='Secret Hitler'
@@ -102,7 +102,7 @@ const Works = () => {
 						contentWidthClass='w-1/3'
 						link='https://aggiedevelopers.com/'
 						source='https://github.com/Aggie-Web-Developers/awd-website'
-						description='Contributor and Vice President of organization aiming to empower budding web developers'
+						description='Major contributor and President of organization aiming to empower budding web developers'
 					/>
 					<Project
 						name='Portfolio Site V2'
