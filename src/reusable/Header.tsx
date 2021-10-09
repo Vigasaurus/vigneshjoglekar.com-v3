@@ -4,10 +4,6 @@ import { themeContext } from '../contexts/theme.context';
 import { useScreenClass } from '../hooks/screenClass.hook';
 import { HamburgerSliderReverse } from 'react-animated-burgers';
 
-// Import Assets Required by this page
-require('../assets/LogoDark.svg');
-require('../assets/LogoLight.svg');
-
 interface NavProps {
 	to: string;
 	children: string;
@@ -106,14 +102,20 @@ const Header: React.FC = () => {
 			className={`w-full bg-background-primary flex m-0 justify-between items-center tw px-6 md:px-16 lg:px-24 max-h-16 py-4`}
 		>
 			<Link to='./' className='z-40'>
-				<img
-					className='h-full'
-					src={
-						localTheme === 'base'
-							? './assets/LogoDark.svg'
-							: './assets/LogoLight.svg'
-					}
-				/>
+				<div className='h-full text-text-primary tw'>
+					<svg
+						width='40'
+						height='35'
+						viewBox='0 0 40 35'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<path
+							d='M26.8018 5.28339L24.6504 8.72562L22.0098 4.39499L24.5301 0.5H39.1326L24.9011 25.0706L13.3348 5.29595L13.19 5.04839H12.9032H9.54839H8.67684L9.11675 5.80076L22.7615 29.1371L19.7833 33.3916L0.864404 0.5H15.8367L24.3385 15.6001L24.7681 16.3632L25.2069 15.6054L30.8843 5.79891L31.3188 5.04839H30.4516H27.2258H26.9487L26.8018 5.28339Z'
+							fill='currentColor'
+							stroke='currentColor'
+						/>
+					</svg>
+				</div>
 			</Link>
 			<div className='flex-grow' />
 			{screenClassIndex <= 1 && (
